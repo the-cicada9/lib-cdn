@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fabric@6.4.3/dist/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" integrity="sha512-XMVd28F1oH/O71fzwBnV7HucLxVwtxf26XV8P4wPk26EDxuGZ91N8bsOttmnomcCD3CS5ZMRL50H0GgOHvegtg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <style>
+    /* body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+    }
+    nav {
+      margin: 20px 0;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+    }
+    .content {
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.8em;
+      color: #777;
+    } */
+  </style>
+</head>
+<body>
+  <!-- <header>
+    <h1>Welcome to My Dummy Page</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="content">
+    <h2>Dummy Content Section</h2>
+    <p>This is a paragraph of dummy content. You can replace this text with your own content.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus sit amet erat fermentum bibendum.</p>
+    <h3>Another Section</h3>
+    <p>Here's some more dummy text. Feel free to customize this as you wish!</p>
+    <p>This is a paragraph of dummy content. You can replace this text with your own content.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus sit amet erat fermentum bibendum.</p>
+    <h3>Another Section</h3>
+    <p>Here's some more dummy text. Feel free to customize this as you wish!</p>
+    <p>This is a paragraph of dummy content. You can replace this text with your own content.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus sit amet erat fermentum bibendum.</p>
+    <h3>Another Section</h3>
+    <p>Here's some more dummy text. Feel free to customize this as you wish!</p>
+    <p>This is a paragraph of dummy content. You can replace this text with your own content.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus sit amet erat fermentum bibendum.</p>
+    <h3>Another Section</h3>
+    <p>Here's some more dummy text. Feel free to customize this as you wish!</p>
+    <p>This is a paragraph of dummy content. You can replace this text with your own content.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus sit amet erat fermentum bibendum.</p>
+    <h3>Another Section</h3>
+    <p>Here's some more dummy text. Feel free to customize this as you wish!</p>
+    <p>This is a paragraph of dummy content. You can replace this text with your own content.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus sit amet erat fermentum bibendum.</p>
+    <h3>Another Section</h3>
+    <p>Here's some more dummy text. Feel free to customize this as you wish!</p>
+    <p>This is a paragraph of dummy content. You can replace this text with your own content.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus sit amet erat fermentum bibendum.</p>
+    <h3>Another Section</h3>
+    <p>Here's some more dummy text. Feel free to customize this as you wish!</p>
+    <p>This is a paragraph of dummy content. You can replace this text with your own content.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus sit amet erat fermentum bibendum.</p>
+    <h3>Another Section</h3>
+    <p>Here's some more dummy text. Feel free to customize this as you wish!</p>
+    <p>This is a paragraph of dummy content. You can replace this text with your own content.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus sit amet erat fermentum bibendum.</p>
+    <h3>Another Section</h3>
+    <p>Here's some more dummy text. Feel free to customize this as you wish!</p>
+    <p>This is a paragraph of dummy content. You can replace this text with your own content.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus sit amet erat fermentum bibendum.</p>
+    <h3>Another Section</h3>
+    <p>Here's some more dummy text. Feel free to customize this as you wish!</p>
+    <p>This is a paragraph of dummy content. You can replace this text with your own content.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus sit amet erat fermentum bibendum.</p>
+    <h3>Another Section</h3>
+    <p>Here's some more dummy text. Feel free to customize this as you wish!</p>
+    <p>This is a paragraph of dummy content. You can replace this text with your own content.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus sit amet erat fermentum bibendum.</p>
+    <h3>Another Section</h3>
+    <p>Here's some more dummy text. Feel free to customize this as you wish!</p>
+    <p>This is a paragraph of dummy content. You can replace this text with your own content.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus sit amet erat fermentum bibendum.</p>
+    <h3>Another Section</h3>
+    <p>Here's some more dummy text. Feel free to customize this as you wish!</p>
+    <p>This is a paragraph of dummy content. You can replace this text with your own content.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus sit amet erat fermentum bibendum.</p>
+    <h3>Another Section</h3>
+    <p>Here's some more dummy text. Feel free to customize this as you wish!</p>
+    <p>This is a paragraph of dummy content. You can replace this text with your own content.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus sit amet erat fermentum bibendum.</p>
+    <h3>Another Section</h3>
+    <p>Here's some more dummy text. Feel free to customize this as you wish!</p>
+    <p>This is a paragraph of dummy content. You can replace this text with your own content.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus sit amet erat fermentum bibendum.</p>
+    <h3>Another Section</h3>
+    <p>Here's some more dummy text. Feel free to customize this as you wish!</p>
+    <p>This is a paragraph of dummy content. You can replace this text with your own content.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus sit amet erat fermentum bibendum.</p>
+    <h3>Another Section</h3>
+    <p>Here's some more dummy text. Feel free to customize this as you wish!</p>
+  </div>
+  <canvas id="canvas"></canvas>
+  <footer>
+    &copy; 2024 Dummy Page. All rights reserved.
+  </footer>
+</body> -->
+<script type="module" src="index.js"></script>
+
+</html>
